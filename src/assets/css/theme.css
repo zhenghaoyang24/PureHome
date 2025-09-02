@@ -2,7 +2,7 @@
 :root {
   /* 主题色 - 淡蓝色 */
   --primary: #00b2f8;
-  --primary-light: #3ec8ff;
+  --primary-light: #8adeff;
   --primary-dark: #008ac0;
 
   /* 背景颜色 */
@@ -22,10 +22,7 @@
   --divider: #e8eaed;
 
   /* 阴影 */
-  --shadow-sm: 0 0 10px rgba(0, 0, 0, 1);
-  --shadow: 0 0 6px rgba(0, 0, 0, 1);
-  --shadow-lg: 0 0 25px rgba(0, 0, 0, 0.12);
-  --shadow-inset: inset 0 0 2px rgba(0, 0, 0, 0.06);
+  --shadow-color: rgba(0, 0, 0, 0.2);
 
   /* 悬停与交互 */
   --hover: rgba(0, 188, 212, 0.08);
@@ -62,10 +59,7 @@
   --divider: #3c3c3c;
 
   /* 阴影（更柔和） */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
-  --shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-color: rgba(0, 0, 0, 0.2);
 
   /* 悬停与交互 */
   --hover: rgba(38, 198, 218, 0.16);

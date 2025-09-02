@@ -22,7 +22,6 @@ import SearchInput from './components/SearchInput.vue'
 .search-container {
   max-width: 720px;
   width: 90%;
-  background-color: rebeccapurple;
 }
 
 .tools-container {

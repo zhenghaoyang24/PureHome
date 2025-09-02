@@ -126,3 +126,16 @@ h6 {
 .rounded-lg {
   border-radius: var(--border-radius-lg) !important;
 }
+
+.shadow {
+  box-shadow: 0 0 6px var(--shadow-color);
+}
+.shadow-sm {
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+.shadow-lg {
+  box-shadow: 0 0 25px var(--shadow-color);
+}
+.shadow-inset {
+  box-shadow: inset 0 0 2px var(--shadow-color);
+}
