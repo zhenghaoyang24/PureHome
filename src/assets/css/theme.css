@@ -1,0 +1,17 @@
+/* 白天主题 */
+:root {
+  --primary: #42b983;
+  --background: #ffffff;
+  --text: #333333;
+  --sidebar: #f8f8f8;
+  --border: #e0e0e0;
+}
+
+/* 夜间主题 */
+[data-theme='dark'] {
+  --primary: #42d392;
+  --background: #121212;
+  --text: #e0e0e0;
+  --sidebar: #1e1e1e;
+  --border: #333333;
+}

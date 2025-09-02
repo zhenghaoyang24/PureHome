@@ -1,0 +1,107 @@
+@import './theme.css';
+@import './variables.css';
+
+html {
+  scroll-behavior: smooth; /* 平滑滚动 */
+  -webkit-text-size-adjust: none; /* 防止 iOS 字体缩放 */
+}
+body {
+  background-color: var(--background);
+  transition: var(--transition);
+  margin: 0;
+  padding: 0;
+}
+
+/* 移除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 移除链接下划线和默认颜色 */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* 表单元素重置 */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =============
+ * 4. 全局基础样式
+ * ============= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* =============
+ * 5. 通用工具类 (Utility Classes)
+ * ============= */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bg-primary {
+  background: var(--primary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.rounded {
+  border-radius: var(--radius-radius) !important;
+}
+
+.rounded-sm {
+  border-radius: var(--border-radius-sm) !important;
+}
+
+.rounded-lg {
+  border-radius: var(--border-radius-lg) !important;
+}
