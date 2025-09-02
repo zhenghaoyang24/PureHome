@@ -3,15 +3,12 @@ import SearchInput from './components/SearchInput.vue'
 </script>
 
 <template>
-  <div class="search-container"></div>
+  <div class="flex-center full-size search-container"></div>
   <div class="tools-container"></div>
 </template>
 
 <style scoped>
 .search-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
   background-image: url('https://api.xsot.cn/bing?jump=true');
   background-position: center;
   background-repeat: no-repeat;
