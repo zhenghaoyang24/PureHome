@@ -46,6 +46,7 @@
   --border-radius-sm: 4px;
   --border-radius: 8px;
   --border-radius-lg: 12px;
+  --border-radius-full: 9999px;
 
   /* 5. 过渡动画 */
   --transition-fast: all 0.2s ease;

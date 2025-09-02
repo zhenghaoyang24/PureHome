@@ -1,17 +1,79 @@
-/* 白天主题 */
+/* 白天主题（默认） */
 :root {
-  --primary: #42b983;
+  /* 主题色 - 淡蓝色 */
+  --primary: #00b2f8;
+  --primary-light: #3ec8ff;
+  --primary-dark: #008ac0;
+
+  /* 背景颜色 */
   --background: #ffffff;
-  --text: #333333;
-  --sidebar: #f8f8f8;
+  --background-alt: #f5f7fa; /* 稍深一点的背景，用于卡片或区域 */
+  --card-bg: #ffffff;
+  --sidebar: #f0f4f8; /* 侧边栏背景，略带灰蓝调 */
+
+  /* 文字颜色 */
+  --text: #212121;
+  --text-secondary: #757575;
+  --text-placeholder: #bdbdbd;
+  --text-inverse: #ffffff; /* 浅色背景上的反色文字 */
+
+  /* 边框与分割线 */
   --border: #e0e0e0;
+  --divider: #e8eaed;
+
+  /* 阴影 */
+  --shadow-sm: 0 0 10px rgba(0, 0, 0, 1);
+  --shadow: 0 0 6px rgba(0, 0, 0, 1);
+  --shadow-lg: 0 0 25px rgba(0, 0, 0, 0.12);
+  --shadow-inset: inset 0 0 2px rgba(0, 0, 0, 0.06);
+
+  /* 悬停与交互 */
+  --hover: rgba(0, 188, 212, 0.08);
+  --focus: 0 0 0 2px rgba(0, 188, 212, 0.2);
+
+  /* 辅助色 */
+  --success: #4caf50;
+  --warning: #ff9800;
+  --error: #f44336;
+  --info: #03a9f4;
 }
 
 /* 夜间主题 */
 [data-theme='dark'] {
-  --primary: #42d392;
+  /* 主题色 - 淡蓝色微调（更亮眼） */
+  --primary: #2692da;
+  --primary-light: #56b2f0;
+  --primary-dark: #1168a1;
+
+  /* 背景颜色 */
   --background: #121212;
+  --background-alt: #1e1e1e;
+  --card-bg: #1e1e1e;
+  --sidebar: #1a1a1a;
+
+  /* 文字颜色 */
   --text: #e0e0e0;
-  --sidebar: #1e1e1e;
+  --text-secondary: #aaaaaa;
+  --text-placeholder: #757575;
+  --text-inverse: #121212;
+
+  /* 边框与分割线 */
   --border: #333333;
+  --divider: #3c3c3c;
+
+  /* 阴影（更柔和） */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+
+  /* 悬停与交互 */
+  --hover: rgba(38, 198, 218, 0.16);
+  --focus: 0 0 0 2px rgba(38, 198, 218, 0.4);
+
+  /* 辅助色（夜间微调） */
+  --success: #66bb6a;
+  --warning: #ffab00;
+  --error: #ef5350;
+  --info: #29b6f6;
 }
