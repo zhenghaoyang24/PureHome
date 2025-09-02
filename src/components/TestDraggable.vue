@@ -8,10 +8,14 @@
       :animation="200"
       class="grid"
       @end="onDragEnd"
+      :swap-threshold="1"
+      :placeholder="placeholderCard"
       :chosenClass="'chosen-card'"
+      :ghost-class="'ghost-card'"
+      :dragClass="'dragging-card'"
     >
       <template #item="{ element }">
-        <div class="card" :style="{ backgroundColor: element.color }">
+        <div class="card">
           {{ element.label }}
         </div>
       </template>
@@ -46,6 +50,12 @@ const cards = ref<Card[]>([
 const onDragEnd = () => {
   console.log('拖拽结束')
 }
+
+const placeholderCard = () => {
+  const el = document.createElement('div')
+  el.className = 'placeholder-card'
+  return el
+}
 </script>
 
 <style scoped>
@@ -57,6 +67,7 @@ const onDragEnd = () => {
 }
 
 .card {
+  background-color: white;
   height: 80px;
   display: flex;
   align-items: center;
@@ -70,7 +81,21 @@ const onDragEnd = () => {
 }
 
 /* 被选中的项（未拖动时） */
+.placeholder-card {
+  border: none;
+}
+
 .chosen-card {
-  border: 2px dashed #000;
+  border: 1px red solid;
+}
+
+/* 拖动的元素原位置 */
+.ghost-card {
+  opacity: 0;
+}
+
+/* 拖动中的元素 */
+.dragging-card {
+  transform: scale(2);
 }
 </style>
