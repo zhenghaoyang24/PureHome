@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import SearchInput from './components/SearchInput.vue'
+import QuickLink from './components/QuickLink.vue'
+import TestDraggable from './components/TestDraggable.vue'
 </script>
 
 <template>
   <div class="full-size flex-center search-background">
     <div class="search-container">
-      <SearchInput></SearchInput>
+      <SearchInput />
+      <QuickLink />
+      <TestDraggable />
     </div>
   </div>
   <div class="tools-container"></div>
