@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import SearchInput from './components/SearchInput.vue'
 import QuickLink from './components/QuickLink.vue'
-import TestDraggable from './components/TestDraggable.vue'
 </script>
 
 <template>
-  <div class="full-size flex-center search-background">
-    <div class="search-container">
-      <SearchInput />
-      <QuickLink />
-      <TestDraggable />
+  <div class="full-size search-background">
+    <div class="full-size flex-center search-background-overlay">
+      <div class="search-container">
+        <SearchInput />
+        <QuickLink />
+      </div>
     </div>
   </div>
   <div class="tools-container"></div>
@@ -17,6 +17,7 @@ import TestDraggable from './components/TestDraggable.vue'
 
 <style scoped>
 .search-background {
+  backdrop-filter: blur(10px);
   background-image: url('https://api.xsot.cn/bing?jump=true');
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +25,7 @@ import TestDraggable from './components/TestDraggable.vue'
 }
 
 .search-container {
-  max-width: 720px;
+  max-width: 760px;
   width: 90%;
 }
 
@@ -33,5 +34,9 @@ import TestDraggable from './components/TestDraggable.vue'
   width: 100%;
   height: 100vh;
   background-color: rgba(255, 0, 0, 0.5);
+}
+
+.search-background-overlay {
+  /* backdrop-filter: blur(10px); */
 }
 </style>

@@ -1,32 +1,23 @@
 <template>
-  <div class="display-flex align-center search-box">
-    <!-- 左侧下拉框 -->
-    <div class="custom-select">
-      <!-- 选中项显示（可点击） -->
-      <div class="flex-center selected-item" @click="toggleDropdown">
-        <img :src="currentEngine.icon" alt="currentEngine.name" />
-        <Icon icon="weui:arrow-filled" class="selected-item-icon" />
-      </div>
-
-      <!-- 下拉列表 -->
-      <ul v-show="isDropdownOpen" class="shadow options">
-        <li
-          v-for="engine in searchEngineList"
-          :key="engine.key"
-          @click="selectEngine(engine)"
-          :class="{ active: engine.key === currentEngine.key }"
-        >
-          <img :src="engine.icon" alt="engine.name" />
-          <span>{{ engine.name }}</span>
-        </li>
-      </ul>
+  <div class="display-flex align-center shadow-lg select-none search-box">
+    <!-- 下拉列表 -->
+    <ul v-show="isDropdownOpen" class="shadow options">
+      <li v-for="engine in searchEngineList" :key="engine.key" @click="selectEngine(engine)">
+        <img :src="engine.icon" alt="engine.name" />
+        <span>{{ engine.name }}</span>
+      </li>
+    </ul>
+    <!-- 选中项显示（可点击） -->
+    <div class="flex-center input-btn custom-select" @click="toggleDropdown">
+      <img :src="currentEngine.icon" alt="currentEngine.name" />
+      <Icon icon="weui:arrow-outlined" class="custom-select-icon" />
     </div>
     <!-- 输入框 -->
-    <input class="input" type="text" maxlength="140" placeholder="Search..." />
+    <input class="input" type="text" maxlength="140" autocomplete="off" placeholder="Search..." />
     <!-- 按钮 -->
-    <button class="flex-center search-btn">
-      <Icon icon="mynaui:search-dot" color="var(--text-inverse)" class="icon" />
-    </button>
+    <a class="flex-center input-btn search-btn" title="搜索">
+      <img src="../assets//svg//search_icon.svg" alt="搜索" />
+    </a>
   </div>
 </template>
 
@@ -62,44 +53,56 @@ function emit(arg0: string, engine: SearchEngine) {
 
 <style scoped>
 .search-box {
+  position: relative;
   box-sizing: border-box;
   width: 100%;
-  gap: 8px;
   border-radius: var(--border-radius-full);
-  padding: var(--space-2);
   background-color: var(--background);
   @media (max-width: var(--breakpoint-mobile-max)) {
     padding: var(--space-1);
   }
 }
+
 .search-btn {
-  width: 36px;
-  height: 36px;
-  background-color: var(--primary);
-  border-radius: var(--border-radius-full);
+  transition: var(--transition-fast);
+  border-top-right-radius: var(--border-radius-full);
+  border-bottom-right-radius: var(--border-radius-full);
+  padding: var(--space-2) var(--space-3);
+  &:hover {
+    background-color: var(--primary-light);
+  }
 }
+
+.custom-select {
+  border-top-left-radius: var(--border-radius-full);
+  border-bottom-left-radius: var(--border-radius-full);
+  padding: var(--space-2) var(--space-3);
+  & > img {
+    margin-right: var(--space-1);
+  }
+}
+
+.input-btn {
+  width: fit-content;
+  height: 36px;
+  cursor: pointer;
+  & > img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
 .input {
   flex: 1;
   height: 36px;
-  padding: 0 var(--space-2);
   border-radius: var(--border-radius);
-  border: 1px solid #ffffff;
   font-size: var(--font-size-base);
   @media (max-width: var(--breakpoint-mobile-max)) {
     padding: 0 var(--space-1);
   }
-  &:focus {
-    border: 1px solid var(--primary);
-  }
-}
-/* 下拉框 */
-.custom-select {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--border-radius-full);
-  position: relative;
 }
 .options {
+  z-index: 99;
   cursor: pointer;
   border-radius: var(--border-radius);
   margin: 0;
@@ -107,6 +110,7 @@ function emit(arg0: string, engine: SearchEngine) {
   width: 100px;
   padding: var(--space-1);
   position: absolute;
+  top: 48px;
   & > li {
     padding: var(--space-1);
     font-size: var(--font-size-base);
@@ -122,26 +126,8 @@ function emit(arg0: string, engine: SearchEngine) {
   }
 }
 
-.selected-item {
-  cursor: pointer;
-  border-radius: var(--border-radius-full);
-  padding-left: 4px;
-  width: 38px;
-  height: 36px;
-  & > img {
-    padding-right: 4px;
-    width: 26px;
-    height: 26px;
-  }
-}
-
 .icon {
   width: 28px;
   height: 28px;
-}
-.selected-item-icon {
-  width: 20px;
-  height: 20px;
-  color: var(--text-secondary);
 }
 </style>

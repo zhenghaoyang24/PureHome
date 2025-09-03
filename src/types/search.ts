@@ -22,3 +22,14 @@ export interface SearchEngine {
   /** 品牌主色，用于 UI 样式 */
   color: string
 }
+
+// 链接
+export interface QuickLink {
+  id: string,
+  userid: string, // 所属人
+  title: string // 名称
+  domain: string // 域名
+  icon: string
+  url: string,
+  creattime: string,
+}
