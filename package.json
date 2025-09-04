@@ -1,6 +1,6 @@
 {
   "name": "purehome",
-  "version": "0.0.3-alpha",
+  "version": "0.0.5-alpha",
   "private": true,
   "type": "module",
   "engines": {

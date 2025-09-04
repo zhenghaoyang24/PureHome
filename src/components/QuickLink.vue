@@ -14,7 +14,7 @@
       :ghost-class="'ghost-card'"
       :dragClass="'dragging-card'"
     >
-      <template #item="{ element }">
+      <template #item="{ element, index }">
         <div class="shadow-sm card">
           {{ element.title }}
         </div>
@@ -27,13 +27,6 @@
 import type { QuickLink } from '@/types/search'
 import { ref } from 'vue'
 import draggable from 'vuedraggable'
-
-// 定义卡片类型
-interface Card {
-  id: number
-  label: string
-  color: string
-}
 
 // QuickLink 数组
 const quickLinks = ref<QuickLink[]>([
@@ -130,5 +123,34 @@ const gridColumsValue = ref<number>(10) // 每行显示的列数
 /* 正在拖动的元素 */
 .dragging-card {
   opacity: 1 !important;
+}
+
+.shake-animation {
+  animation: subtle-shake 0.8s ease-in-out infinite;
+}
+
+@keyframes subtle-shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(2px, -1px);
+  }
+  40% {
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    transform: translate(-2px, -1px);
+  }
+  80% {
+    transform: translate(1px, 1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.shake-subtle {
+  animation: subtle-shake 0.8s ease-in-out infinite;
 }
 </style>
