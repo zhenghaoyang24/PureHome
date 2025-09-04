@@ -16,7 +16,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
-
 .container {
+  padding: 10px;
 }
 </style>
