@@ -13,7 +13,13 @@
       <Icon icon="weui:arrow-outlined" class="custom-select-icon" />
     </div>
     <!-- 输入框 -->
-    <input class="input" type="text" maxlength="140" autocomplete="off" placeholder="Search..." />
+    <input
+      class="input"
+      type="text"
+      maxlength="140"
+      autocomplete="disabled"
+      placeholder="Search..."
+    />
     <!-- 按钮 -->
     <a class="flex-center input-btn search-btn" title="搜索">
       <img src="../assets//svg//search_icon.svg" alt="搜索" />
@@ -45,10 +51,6 @@ window.addEventListener('click', (e) => {
     isDropdownOpen.value = false
   }
 })
-
-function emit(arg0: string, engine: SearchEngine) {
-  throw new Error('Function not implemented.')
-}
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SearchInput from './components/SearchInput.vue'
-import QuickLink from './components/QuickLink.vue'
+import QuickLinks from './components/QuickLinks.vue'
 import { onMounted, ref } from 'vue'
 
 // 本地默认图片路径
@@ -60,7 +60,7 @@ onMounted(() => {
     <!-- 内容区域 -->
     <div class="search-container">
       <SearchInput />
-      <QuickLink />
+      <QuickLinks />
     </div>
   </div>
   <div class="tools-container"></div>

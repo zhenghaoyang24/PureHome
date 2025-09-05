@@ -145,3 +145,6 @@ h6 {
 .select-none {
   user-select: none;
 }
+.text-shadow {
+  text-shadow: 0 0 1px var(--shadow-color);
+}
